@@ -16,7 +16,20 @@ const connect = function () {
 
   conn.on("connect", () => {
     console.log("Successfully conected to the game server!");
-    console.log("Name:IMD");
+    conn.write("Name: IMD");
+
+    /*
+    conn.write("Move: up");
+
+    setTimeout(() => {
+      conn.write("Move: left");
+    }, 2000);
+
+    setInterval(() => {
+      conn.write("Move: left");
+    }, 100);
+    */
+
   });
 
   return conn;
